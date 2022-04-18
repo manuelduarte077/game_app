@@ -1,16 +1,20 @@
-# game_app
+# Game App Flutter
 
-A new Flutter project.
+## Flutter + Firestore + Clean Architecture + DI
 
-## Getting Started
+![](https://miro.medium.com/max/920/1*u9jx_nAEHzeS-YI1T0a4MA.png)
 
-This project is a starting point for a Flutter application.
+- ## Data: in this layer will be all the logical reference to the data, such as models (objects), access to databases, access to API, etc.
 
-A few resources to get you started if this is your first Flutter project:
+- ## Domain: intermediate layer between the view and the data layer. This layer will host the different use cases, for example the use case of querying a collection in Firestore.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- ## Presentation: this layer is responsible for handling the view. Here there may be components that control access to the domain layer, eg provider. This layer is often said to be "dumb" since it only understands "painting" the data and it is only its provider that communicates with the Domain layer.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Packages
+
+- firebase_core
+- cloud_firestore
+- get_it
+- provider
+- pedantic
+- very_good_analysis
