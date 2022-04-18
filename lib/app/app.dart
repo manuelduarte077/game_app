@@ -1,19 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:game_app/presentation/providers/providers.dart';
+import 'package:game_app/presentation/screens/screens.dart';
+import 'package:get_it/get_it.dart';
+import 'package:provider/provider.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<GameProvider>(
+          create: (_) => GetIt.I<GameProvider>()..getGames('playstation5'),
         ),
-        body: const Center(
-          child: Text('Hello World'),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.indigo,
         ),
+        home: const HomeScreen(),
       ),
     );
   }

@@ -1,5 +1,7 @@
 # Game App Flutter
 
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+
 ## Flutter + Firestore + Clean Architecture + DI
 
 ![](https://miro.medium.com/max/920/1*u9jx_nAEHzeS-YI1T0a4MA.png)

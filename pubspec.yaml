@@ -15,7 +15,6 @@ dependencies:
   flutter:
     sdk: flutter
   get_it: ^7.2.0
-  pedantic: ^1.11.1
   provider: ^6.0.2
 
 dev_dependencies:
