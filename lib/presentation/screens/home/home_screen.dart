@@ -9,7 +9,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // var games = context.watch<GameProvider>();
     final games = context.watch<GameProvider>();
 
     return Scaffold(
@@ -18,18 +17,10 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Expanded(
+            Container(
+                height: 250,
                 child: ListGameWidget(
-                    games.gameListSwitch, 'Juegos Nintendo Switch')),
-            Expanded(
-                child:
-                    ListGameWidget(games.gameListPS5, 'Juegos Playstation 5')),
-            Expanded(
-                child: ListGameWidget(
-                    games.gameListXboxSeriesX, 'Juegos Xbox Series X')),
-            Expanded(
-                child:
-                    ListGameWidget(games.gameListTopSalesPC, 'Top Sales PC')),
+                    games.gameListPS5 ?? [], 'Juegos Playstation 5')),
           ],
         ),
       ),

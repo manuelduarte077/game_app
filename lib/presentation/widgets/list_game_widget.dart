@@ -43,7 +43,7 @@ class ListGameWidget extends StatelessWidget {
                                 Container(
                                   height: 150,
                                   child: Image(
-                                    image: NetworkImage(game.image),
+                                    image: NetworkImage(game.image ?? ''),
                                     fit: BoxFit.fill,
                                   ),
                                 ),
@@ -57,7 +57,7 @@ class ListGameWidget extends StatelessWidget {
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Text(
-                                        game.name,
+                                        game.name ?? '',
                                         textAlign: TextAlign.center,
                                         style: const TextStyle(
                                             color: Colors.white, fontSize: 12),

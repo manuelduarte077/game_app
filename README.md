@@ -23,5 +23,4 @@
 - cloud_firestore
 - get_it
 - provider
-- pedantic
 - very_good_analysis

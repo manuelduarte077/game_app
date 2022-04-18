@@ -8,14 +8,17 @@ class FirestoreService {
 
   Future<List<Game>> getGamesByCollection(String collectionName) async {
     final games = <Game>[];
+    print('collectionName: $collectionName');
 
     await db.collection(collectionName).get().then(
           (querySnapshot) => querySnapshot.docs.forEach((element) {
             games.add(
               Game.fromMap(element.data()),
             );
+            print('element: ${element.data()}');
           }),
         );
+
     return games;
   }
 }

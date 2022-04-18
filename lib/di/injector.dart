@@ -1,5 +1,7 @@
 import 'package:game_app/data/firestore_service/game_service/firestore_service.dart';
 import 'package:game_app/data/repository/repository.dart';
+import 'package:game_app/domain/domain.dart';
+import 'package:game_app/presentation/providers/providers.dart';
 import 'package:get_it/get_it.dart';
 
 final _injector = GetIt.instance;
